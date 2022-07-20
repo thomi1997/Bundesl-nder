@@ -4,6 +4,7 @@ let bundeslaender = [];
 async function getBundesLeander() {
     let response = await fetch('./bundesland.json');
     bundeslaender = await response.json();
+    console.log('bundesländer', bundeslaender);
     render();   
 }
 
@@ -14,8 +15,9 @@ function render() {
 
         for (let i = 0; i < bundeslaender.length; i++) {
             const state = bundeslaender[i]['name'];
+            const url = bundeslaender[i]['url']
             content.innerHTML += /*html*/`
-            <div>${state['name']}</div>
+            <a href="${url}">${state}</a>
             `;
         }
 }
