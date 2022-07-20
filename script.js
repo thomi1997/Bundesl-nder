@@ -2,7 +2,7 @@ let bundeslaender = [];
 
 
 async function getBundesLeander() {
-    let response = await fetch('/.bundesland.json');
+    let response = await fetch('./bundesland.json');
     bundeslaender = await response.json();
     render();   
 }
