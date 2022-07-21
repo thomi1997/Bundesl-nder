@@ -15,9 +15,17 @@ function render() {
 
         for (let i = 0; i < bundeslaender.length; i++) {
             const state = bundeslaender[i]['name'];
-            const url = bundeslaender[i]['url']
+            const url = bundeslaender[i]['url'];
+            const population = bundeslaender[i]['population']; 
             content.innerHTML += /*html*/`
-            <a href="${url}">${state}</a>
+            <a class="state-link state" href="${url}">
+                <span>
+                    ${state}
+                </span>
+                <span>
+                    ${population} Millionen
+                </span>
+            </a>
             `;
         }
 }
