@@ -6,37 +6,91 @@ body {
 }
 
 h1 {
-    padding-left: 20px;
+    padding-left: 10px;
+    text-transform: capitalize;
+    font-size: 32px;
+}
+
+.font-weight-bold {
+    font-weight: 600;
 }
 
 .background-head {
     display: flex;
     align-items: center;
-    height: 60px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     background-color: rgb(221,221,221);
 }
 
 .all-states {
-    max-width: 1024px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .state {
-    display: flex;
-    flex-direction: column;
-    width: 29%;
-    border: solid 10px;
+    display: block;
+    color: black; 
+    width: 33%;
+    box-sizing: border-box;
+    border: solid 5px;
     border-color: rgb(238,238,238);
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     cursor: pointer;   
+}
+
+.state:hover {
+    border: 5px solid rgb(199, 198, 198);
 }
 
 .state-link {
     color: rgb(102,102,102);
     text-decoration: none;
+}
+
+.population-color {
+    color: rgb(158, 152, 152);
+}
+
+.search-button-div {
+    display: flex;
+    font-weight: bold;
+}
+
+.search-button {
+    text-align: center;
+    background-color: rgb(238,238,238);
+    width: 25px;
+    padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: rgb(179, 175, 175);
+}
+
+@media(max-width: 800px) {
+
+    .all-states {
+        justify-content:space-around;
+    }
+
+    .state {
+        box-sizing: content-box;
+    }
+}
+
+@media(max-width: 500px) {
+    
+    .all-states {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .state {
+        width: 80%;
+    }
 }
