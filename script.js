@@ -3,7 +3,7 @@ let letters = [];
 
 
 async function getBundesLeander() {
-    let response = await fetch('./bundesland.json');
+    let response = await fetch('./Coding-Challange-Bundesländer/bundesland.json'); /*http://thomas-ketler.developerakademie.net/Coding-Challange-Bundesländer/bundesland.json*/
     bundeslaender = await response.json();
     console.log('bundesländer', bundeslaender);
     render();   
